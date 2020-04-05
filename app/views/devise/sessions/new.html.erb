@@ -1,0 +1,26 @@
+
+<section class="form-auth text-center">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <h2>Sign In</h2>
+    <div class="field ">
+      <%= f.label :email, for:"input-email", class: "sr-only"%><br />
+      <%= f.email_field :email, autofocus: true, class: "form-control", id: "input-email", placeholder: "Email Address", autocomplete: "email" %>
+    </div>
+    <div class="field">
+      <%= f.label :password, for: "input-password", class: "sr-only" %><br />
+      <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "input-password", placeholder: "Password" %>
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+  <% end %>
+
+</section>
+
+
+
+
